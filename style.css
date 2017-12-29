@@ -55,17 +55,139 @@ a {
 }
 
 .main-menu a:hover {
-    color: black;
+    color: rgb(202, 14, 14);
 }
 
 .main-menu a:active {
-    color: red;
+    color: rgb(175, 10, 10);
 }
 
-h1 {
+.illumination h1 {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
     font-size: 50px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 60px;
+    color: #ffffff;
+}
+
+.illumination {
+    display: table;
+    background-color: #3b4046;
+    background-image: url("img/illumination.png");
+    width: 100%;
+    min-width: 1200px;
+    min-height: 574px;
     text-align: center;
-    /* color: #ffffff; */
+}
+
+.menu-wrapper {
+    position: relative;
+    width: 155px;
+    min-height: 71px;
+    margin: 0 auto;
+    background-color: #f34949;
+}
+
+.menu-wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 0;
+    border-left: 77px solid transparent;
+    border-right: 77px solid transparent;
+    border-bottom: 10px solid #ffffff;
+}
+
+.restaurant-menu {
+    position: relative;
+}
+
+.restaurant-menu h1 {
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 71px;
+    color: #ffffff;
+}
+
+.listing-column {
+    width: 520px;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 85px;
+    padding: 0;
+}
+
+.listing-name,
+.listing-price {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555555;
+}
+
+p.flex-container {
+    margin: 0;
+}
+
+.listing-description {
+    font-size: 12px;
+    font-style: italic;
+    color: #b7b7b7;
+    margin: 0;
+}
+
+.listing-placeholder {
+    height: 1px;
+    min-width: 180px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 42px;
+    flex-grow: 1;
+    background-color: #e3e1e1;
+}
+
+.listing-column li:not(:last-child) {
+    margin-bottom: 55px;
+}
+
+.load-more {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    min-width: 130px;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid #b7b7b7;
+    color: #b7b7b7;
+    background-color: transparent;
+}
+
+.load-more:hover {
+    color: black;
+    background-color: #dddbdb;
+    cursor: pointer;
+}
+
+.load-more:active {
+    background-color: #f34949;
+    border-color: #f02b2b;
+    outline: none;
+}
+
+.load-more::after {
+    content: "";
+    position: absolute;
+    top: 33%;
+    right: 5px;
+    width: 23px;
+    height: 12px;
+    background-image: url("img/load-more.png");
 }
